@@ -1,33 +1,31 @@
-@model Creating_a_custom_user_login_form.Models.User
-@{
+model Creating_a_custom_user_login_form.Models.User
+{
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@using (Html.BeginForm())
+using (Html.BeginForm())
 {
-    @Html.ValidationSummary(true, "Login failed. Check your login details.");
+    Html.ValidationSummary(true, "Login failed. Check your login details.");
     <div>
         <fieldset>
             <legend>Login</legend>
-            <div class="editor-label">
-                @Html.LabelFor(u => u.UserName)
-            </div>
-            <div class="editor-field">
-                @Html.TextBoxFor(u => u.UserName)
-                @Html.ValidationMessageFor(u => u.UserName)
-            </div>
-            <div class="editor-label">
+             Public class="editor-label">
+             class="editor-field">
+                Html.TextBoxFor(u => u.UserName)
+                Html.ValidationMessageFor(u => u.UserName)
+            
+            class="editor-label">
                 @Html.LabelFor(u => u.Password)
-            </div>
-            <div class="editor-field">
+        
+            class="editor-field">
                 @Html.PasswordFor(u => u.Password)
                 @Html.ValidationMessageFor(u => u.Password)
-            </div>
-            <div class="editor-label">
+        
+            class="editor-label">
                 @Html.CheckBoxFor(u => u.RememberMe)
                 @Html.LabelFor(u => u.RememberMe)
-            </div>
+            
             <input type="submit" value="Log In" />
         </fieldset>
-    </div>
+    
 }
