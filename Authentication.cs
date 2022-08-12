@@ -1,5 +1,7 @@
-div style="width: auto; background-color: #728ea7;">
-    @if (Request.IsAuthenticated) {
+div style="width: auto; background-color: #739ea9;">{
+    
+    if (Request.IsAuthenticated) }
+    {
         <strong>@Html.Encode(User.Identity.Name)</strong>
         @Html.ActionLink("Sign Out", "Logout", "User")
     }
@@ -8,4 +10,3 @@ div style="width: auto; background-color: #728ea7;">
         <span> | </span>
         @Html.ActionLink("Sign In", "Login", "User")
     }
-</div> 
