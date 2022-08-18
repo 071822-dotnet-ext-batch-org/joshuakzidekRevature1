@@ -1,0 +1,26 @@
+public class CommentVM
+    {
+        public Ticket Ticket { get; set; }
+
+        private Ticket Ticket_Id { get; set; }
+
+        public IEnumerable<SelectListItem> ProjectList { get; set; }
+
+        public IEnumerable<SelectListItem> StatusList { get; set; }
+
+
+        public string TicketStatus { get; set; }
+
+        public DateTime TicketCreated { get; set; }
+
+        public string TicketPriority { get; set; }
+        
+        private string TicketType { get; set; }
+        // Comment
+        private Comments Comments { get; set; }
+
+        private Comments Comment_Id { get; set; }
+
+        private string Message { get; set; }
+
+    }

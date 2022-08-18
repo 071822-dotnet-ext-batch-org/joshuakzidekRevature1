@@ -1,0 +1,20 @@
+using Models;
+using RepositoryLayer;
+
+namespace BusinessLayer;
+public class BusinessLayer
+{
+    public readonly RepoLayer _repoLayer;
+    public BusinessLayer()
+    {
+        this._repoLayer = new RepoLayer();
+        List<Ticket> list = await this._repoLayer.GetStatusAsync(status);
+        return list;
+    }
+
+    public async Task<UpdatedTicketDto> UpdateStatusAsync
+    {
+        if (await this._repoLayer.IsManagerAsync(approvalUSERID))
+        {
+            UpdatedTicketDto approvedTicket = 
+        }
